@@ -1,0 +1,39 @@
+// Define um grupo de testes chamado "Testes da aplicação Dev Finance"
+describe('Testes da aplicação Dev Finance', () => {
+  // Define um teste específico com a descrição "Cadastra uma saída"
+  it('Cadastra uma saída', () => {
+    // Acessa a URL da aplicação Dev Finance
+    cy.visit('https://dev-finance.netlify.app/');
+
+    // Clica no botão "+ Nova Transação" para abrir o formulário de nova transação
+    cy.contains('+ Nova Transação').click();
+    // Chama a função para criar uma transação com descrição "Conta de Luz" e valor -200 (saída)
+    criarTransacao('Conta de Luz', -200);
+
+    // Repete o processo para adicionar outra transação
+    cy.contains('+ Nova Transação').click();
+    // Cria transação com descrição "Conta de Água" e valor 150 (entrada)
+    criarTransacao('Conta de Água', 150);
+
+    // Repete para mais uma transação
+    cy.contains('+ Nova Transação').click();
+    // Cria transação com descrição "Conta de net" e valor -270 (saída)
+    criarTransacao('Conta de net', -270);
+
+    // Verifica se na tabela de transações existe uma linha que contém o texto "Conta de Luz"
+    cy.get('#data-table > tbody > tr').should('contain.text', 'Conta de Luz');
+  });
+});
+
+// Função auxiliar que preenche o formulário de nova transação
+// Recebe como parâmetros a descrição e o valor da transação
+function criarTransacao(descricao, valor) {
+  // Preenche o campo de descrição com o texto recebido
+  cy.get('#description').type(descricao);
+  // Preenche o campo de valor com o número recebido
+  cy.get('#amount').type(valor);
+  // Preenche o campo de data com uma data fixa
+  cy.get('#date').type('2023-10-01');
+  // Clica no botão "Salvar" para enviar o formulário
+  cy.contains('Salvar').click();
+}

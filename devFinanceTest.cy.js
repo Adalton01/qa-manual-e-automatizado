@@ -1,39 +1,46 @@
-// Descreve o conjunto de testes para a aplicação Dev Finance
 describe("Teste de aplicaçao ", () => {
-
-  // Antes de cada teste, acessa o site e limpa o armazenamento local para garantir que comece limpo
+  // Antes de cada teste, abre o site e limpa o armazenamento local para não ter dados salvos
   beforeEach(() => {
-    cy.visit("https://dev-finance.netlify.app/"); // Acessa o site
-    cy.clearLocalStorage(); // Limpa dados salvos anteriormente
+    cy.visit("https://dev-finance.netlify.app/");
+    cy.clearLocalStorage();
   });
 
-  // Primeiro teste: adiciona uma transação
+  // Teste para adicionar um item novo e verificar se ele aparece na tabela
   it("Adiciona item", () => {
-    cy.get("#transaction > .button").click(); // Clica no botão de nova transação
-    cy.get("#description").type("Salario"); // Digita a descrição 'Salario'
-    cy.get("#amount").type("1000"); // Digita o valor
-    cy.get("#date").type("2023-10-01"); // Digita a data
+    cy.get("#transaction > .button").click(); // Clica no botão para abrir o formulário de nova transação
+    cy.get("#description").type("Salario"); // Preenche a descrição da transação
+    cy.get("#amount").type("1000"); // Preenche o valor da transação
+    cy.get("#date").type("2023-10-01"); // Preenche a data da transação
     cy.get("button").contains("Salvar").click(); // Clica no botão salvar
-    // Verifica se na tabela existe uma linha com o texto 'Salario'
-    cy.get("tr > :nth-child(1)").should("contain", "Salario");
+    cy.get("tr > :nth-child(1)").should("contain", "Salario"); // Verifica se a descrição "Salario" apareceu na tabela
   });
 
-  // Segundo teste: adiciona múltiplos itens usando a função rápido
+  // Teste que adiciona vários itens usando a função auxiliar 'rapido'
   it("itens ", () => {
-    rapido("Sabado", "1000", "2023-10-01"); // Adiciona item 'Sabado'
-    rapido("Salario", "1000", "2023-10-01"); // Adiciona item 'Salario'
-    rapido("Domingo", "-1000", "2023-10-01"); // Adiciona item 'Domingo' com valor negativo
+    rapido("Sabado", "1000", "2023-10-01");  // Adiciona transação "Sabado"
+    rapido("Salario", "1000", "2023-10-01"); // Adiciona transação "Salario"
+    rapido("Domingo", "-1000", "2023-10-01"); // Adiciona transação "Domingo" com valor negativo
   });
 
-  // Terceiro teste: exclui um item específico
+  // Teste para excluir uma transação específica
   it("Exclur", () => {
-    // Adiciona 3 itens antes de excluir
-    rapido("Sabado", "1000", "2023-10-01");
-    rapido("Salario", "1000", "2023-10-01");
-    rapido("Domingo", "-1000", "2023-10-01");
+    rapido("Sabado", "1000", "2023-10-01");  // Adiciona transação "Sabado"
+    rapido("Salario", "1000", "2023-10-01"); // Adiciona transação "Salario"
+    rapido("Domingo", "-1000", "2023-10-01"); // Adiciona transação "Domingo"
 
-    // Verifica se os itens foram adicionados na tabela
-    cy.get("tr").should("contain", "Salario");
-    cy.get("tr").should("contain", "Sabado");
+    cy.get("tr").should("contain", "Salario"); // Confirma que a transação "Salario" está na tabela
+    cy.get("tr").should("contain", "Sabado");  // Confirma que a transação "Sabado" está na tabela
 
-    // Localiza a linha que contém 'Salario' e clica na lixeira para r
+    // Busca a linha que contém a descrição "Salario", acha a imagem do botão de excluir e clica nela
+    cy.contains(".description", "Salario").parent("tr").find("img").click();
+  });
+});
+
+// Função para facilitar a criação de novas transações, reutilizando o código para preencher o formulário
+function rapido(descriçao, valor, data) {
+  cy.get("#transaction > .button").click(); // Abre o formulário de nova transação
+  cy.get("#description").type(descriçao);   // Preenche a descrição
+  cy.get("#amount").type(valor);             // Preenche o valor
+  cy.get("#date").type(data);                // Preenche a data
+  cy.get("button").contains("Salvar").click(); // Salva a transação
+}

@@ -1,0 +1,56 @@
+Teste Manual – ConversorVisaoA
+
+Programa testado: ConversorVisaoA.exe
+Objetivo: Validar a funcionalidade do botão “Encontrar Arquivo” e verificar se a interface responde corretamente à interação do usuário.
+
+1. Ambiente de Teste
+
+Sistema Operacional: Windows 10/11
+
+Local do programa: C:\Users\Dalton\Desktop\ConversorVisaoA.exe
+
+Pré-requisitos: Programa aberto na área de trabalho
+
+2. Objetivo do Teste
+
+Garantir que o botão “Encontrar Arquivo”:
+
+Está visível na interface do usuário.
+
+Pode ser clicado pelo usuário.
+
+Executa a ação esperada (abrir a janela para seleção de arquivos).
+
+3. Passos do Teste
+
+Localizar o ícone do programa ConversorVisaoA na área de trabalho.
+
+Dar duplo clique para abrir o programa.
+
+Verificar se a janela principal do programa foi aberta corretamente.
+
+Localizar o botão “Encontrar Arquivo” na tela.
+
+Clicar no botão “Encontrar Arquivo”.
+
+Verificar se a janela de seleção de arquivos é aberta.
+
+Registrar os resultados observados.
+
+4. Resultados Esperados
+
+O programa abre corretamente sem erros.
+
+O botão “Encontrar Arquivo” é visível na tela.
+
+Ao clicar no botão, a janela para escolher arquivos é aberta.
+
+Nenhuma mensagem de erro é exibida.
+
+5. Observações
+
+Teste realizado de forma manual, simulando a interação real do usuário.
+
+Se o botão não abrir a janela de seleção de arquivos, o teste é não aprovado e deve ser registrado como bug.
+
+Pode ser usada captura de tela da interface antes e depois do clique como evidência do teste

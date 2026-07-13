@@ -1,0 +1,49 @@
+# Conhecimentos Básicos de MySQL para QA
+
+## 1. Introdução
+
+O conhecimento básico de banco de dados é importante para profissionais de QA, pois permite validar informações armazenadas pelo sistema e verificar se os dados estão sendo tratados corretamente.
+
+Durante os testes, o QA pode utilizar consultas SQL para analisar registros, validar cadastros e investigar possíveis problemas encontrados na aplicação.
+
+---
+
+# 2. Conceitos Básicos
+
+## Banco de Dados
+
+Um banco de dados é utilizado para armazenar, organizar e recuperar informações de uma aplicação.
+
+Exemplos de dados armazenados:
+
+- Usuários.
+- Produtos.
+- Pedidos.
+- Informações de clientes.
+
+---
+
+## Tabelas
+
+As tabelas organizam os dados em linhas e colunas.
+
+Exemplo:
+
+Tabela: usuários
+
+| id | nome | email |
+|---|---|---|
+| 1 | João | joao@email.com |
+
+---
+
+# 3. Principais comandos SQL
+
+## SELECT
+
+Utilizado para consultar informações.
+
+Exemplo:
+
+```sql
+SELECT * FROM usuarios;

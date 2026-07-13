@@ -1,67 +1,179 @@
-Testes de API - Conceitos, Ferramentas e Prática
-Neste documento, apresento meu entendimento sobre testes de API REST, explicando os métodos HTTP mais usados, os principais códigos de status, e as ferramentas Swagger e Postman, que utilizo para explorar e testar endpoints. Todo o conteúdo é baseado nos conhecimentos que estudei e apliquei, com foco no que um QA Júnior precisa entender para garantir qualidade nas integrações de sistemas.
+# Testes de API - Conceitos, Ferramentas e Prática
 
-📌 O que é uma API REST?
-Uma API REST (Representational State Transfer) permite que diferentes sistemas se comuniquem através da web, usando protocolos HTTP. É muito usada no desenvolvimento de aplicações modernas, como aplicativos web e mobile.
+## Introdução
 
-📡 Métodos HTTP mais usados:
-GET: Busca informações do servidor (ex: listar usuários).
+Neste documento apresento meus conhecimentos sobre testes de API REST, abordando conceitos fundamentais, métodos HTTP, códigos de status, ferramentas utilizadas e exemplos de validações realizadas durante meus estudos em Qualidade de Software (QA).
 
-POST: Envia informações para criar um novo dado (ex: cadastrar um novo usuário).
+O objetivo é demonstrar a aplicação de testes de API na validação da comunicação entre sistemas, garantindo que requisições e respostas estejam funcionando conforme esperado.
 
-PUT: Atualiza informações existentes (ex: editar dados de um usuário).
+---
 
-DELETE: Remove dados (ex: excluir um usuário).
+# O que é uma API REST?
 
-Esses métodos são fundamentais para o funcionamento das APIs REST e devem ser testados com atenção, validando tanto o envio correto dos dados quanto as respostas do servidor.
+Uma API REST (Representational State Transfer) permite que diferentes aplicações se comuniquem através de requisições HTTP.
 
-🔢 Códigos de Status HTTP:
-Durante os testes de API, é importante saber interpretar os códigos de retorno:
+APIs são utilizadas em sistemas web, aplicações mobile e integrações entre serviços.
 
-200 OK: Requisição bem-sucedida.
+Durante os testes, o QA valida se os endpoints retornam informações corretas, tratam erros adequadamente e seguem as regras definidas.
 
-201 Created: Recurso criado com sucesso.
+---
 
-400 Bad Request: Erro na requisição (dados inválidos).
+# Métodos HTTP
 
-401 Unauthorized: Falta de autenticação.
+## GET
 
-403 Forbidden: Sem permissão para acessar o recurso.
+Utilizado para consultar informações.
 
-404 Not Found: Rota ou recurso não encontrado.
+Exemplo:
 
-500 Internal Server Error: Erro no servidor.
+Consultar lista de usuários.
 
-🛠️ Ferramentas que utilizo:
-🔍 Swagger
-Permite visualizar e testar as APIs diretamente no navegador.
+Validações:
 
-Facilita entender a estrutura das requisições e respostas.
+- Retorno correto dos dados.
+- Estrutura do JSON.
+- Código HTTP esperado.
 
-Ajuda a validar se a documentação da API está correta.
+Resultado esperado:
 
-🚀 Postman
-Ferramenta para testar manualmente APIs.
+**Status 200 OK**
 
-Com ela posso:
+---
 
-Criar requisições GET, POST, PUT, DELETE.
+## POST
 
-Enviar dados no body (JSON).
+Utilizado para criar novos registros.
 
-Adicionar headers e tokens de autenticação.
+Exemplo:
 
-Visualizar e analisar a resposta da API.
+Cadastrar um novo usuário.
 
-Simular cenários de sucesso e erro.
+Validações:
 
-🧪 O que costumo testar:
-Respostas corretas de acordo com os dados enviados.
+- Campos obrigatórios.
+- Formato dos dados enviados.
+- Retorno da criação.
 
-Se o código de status HTTP está adequado.
+Resultado esperado:
 
-Mensagens de erro quando envio dados inválidos.
+**Status 201 Created**
 
-Requisições sem token (para testar segurança).
+---
 
-Campos obrigatórios ausentes.
+## PUT
+
+Utilizado para atualizar informações existentes.
+
+Exemplo:
+
+Alterar dados de um usuário.
+
+Validações:
+
+- Atualização correta dos dados.
+- Persistência das alterações.
+
+Resultado esperado:
+
+**Status 200 OK**
+
+---
+
+## DELETE
+
+Utilizado para remover registros.
+
+Exemplo:
+
+Excluir um usuário.
+
+Validações:
+
+- Confirmação da exclusão.
+- Retorno da API.
+
+Resultado esperado:
+
+**Status 204 No Content**
+
+---
+
+# Códigos de Status HTTP
+
+Durante os testes de API, é importante validar se o retorno está de acordo com o comportamento esperado.
+
+| Código | Descrição |
+|---|---|
+| 200 OK | Requisição realizada com sucesso |
+| 201 Created | Recurso criado com sucesso |
+| 400 Bad Request | Dados enviados incorretamente |
+| 401 Unauthorized | Usuário não autenticado |
+| 403 Forbidden | Usuário sem permissão |
+| 404 Not Found | Recurso não encontrado |
+| 500 Internal Server Error | Erro interno do servidor |
+
+---
+
+# Ferramentas Utilizadas
+
+## Swagger
+
+Ferramenta utilizada para:
+
+- Visualizar documentação da API.
+- Conhecer endpoints disponíveis.
+- Analisar parâmetros e respostas.
+- Realizar testes diretamente pela interface.
+
+---
+
+## Postman
+
+Ferramenta utilizada para testes manuais de API.
+
+Com o Postman é possível:
+
+- Criar requisições GET, POST, PUT e DELETE.
+- Enviar dados no formato JSON.
+- Configurar headers.
+- Trabalhar com autenticação e tokens.
+- Validar respostas da API.
+
+---
+
+# Cenários de Teste Realizados
+
+## CT-API-001 - Consulta de usuários
+
+**Objetivo:**
+
+Validar retorno dos usuários cadastrados.
+
+**Requisição:**
+
+GET /usuarios
+
+**Resultado esperado:**
+
+- Retornar lista de usuários.
+- Status 200 OK.
+
+---
+
+## CT-API-002 - Cadastro de usuário
+
+**Objetivo:**
+
+Validar criação de um novo usuário.
+
+**Requisição:**
+
+POST /usuarios
+
+Body:
+
+```json
+{
+ "nome": "Teste QA",
+ "email": "teste@email.com"
+}

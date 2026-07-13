@@ -6,7 +6,7 @@ Repositório criado para demonstrar minha evolução em Qualidade de Software.
 
 - Testes funcionais
 - Testes exploratórios
-- Criação de casos de teste
+- Criação casos de teste
 - Plano de testes
 - Relatório de bugs
 - Testes de API com Postman

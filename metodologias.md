@@ -1,37 +1,117 @@
-Metodologias e Conceitos em QA: TDD, ATDD, BDD e Casos de Regressão
-Neste documento, apresento meu entendimento sobre algumas metodologias importantes na área de Garantia da Qualidade (QA), como TDD, ATDD, BDD, além da importância dos casos de regressão. Meu objetivo é demonstrar o conhecimento que adquiri estudando esses conceitos e como eles se aplicam no desenvolvimento de software.
+# Metodologias de Desenvolvimento de Software
 
-Test-Driven Development (TDD)
-O TDD (Desenvolvimento Orientado a Testes) é uma metodologia que propõe escrever os testes automatizados antes de implementar o código funcional. A ideia principal é seguir o ciclo:
+## 1. Introdução
 
-Escrever um teste que falhe (pois a funcionalidade ainda não existe).
-Implementar o código mínimo para passar no teste.
-Refatorar o código mantendo os testes verdes.
-Esse processo garante que o desenvolvimento seja guiado por testes e que o código tenha uma cobertura de testes consistente, facilitando a manutenção e evitando bugs.
+As metodologias de desenvolvimento de software definem a forma como equipes organizam, planejam, desenvolvem e entregam produtos digitais.
 
-Acceptance Test-Driven Development (ATDD)
-O ATDD (Desenvolvimento Orientado a Testes de Aceitação) é uma extensão do TDD, mas focado em garantir que as funcionalidades desenvolvidas atendam aos critérios de aceitação definidos por clientes, usuários ou stakeholders.
-Aqui, os testes são criados antes do desenvolvimento, mas com foco nos requisitos de negócio e funcionalidades esperadas do sistema, tornando o processo colaborativo entre equipes técnicas e de negócio.
-O ATDD ajuda a alinhar o desenvolvimento com as expectativas reais, reduzindo retrabalhos e aumentando a qualidade da entrega.
+O profissional de QA participa dessas metodologias garantindo a qualidade do software desde o planejamento até a entrega final.
 
-Behavior-Driven Development (BDD)
-O BDD (Desenvolvimento Orientado a Comportamento) é uma evolução do ATDD que utiliza uma linguagem mais próxima da linguagem natural para descrever os comportamentos esperados do sistema.
-Com BDD, os testes são escritos em formatos como Gherkin (exemplo: “Dado que..., Quando..., Então...”), facilitando a comunicação entre desenvolvedores, testers e stakeholders, além de servir como documentação viva.
-Essa metodologia foca não só em testar, mas em garantir que o software cumpra os comportamentos e regras de negócio definidos, melhorando a colaboração e o entendimento entre todos os envolvidos.
+---
 
-Casos de Teste de Regressão
-Os casos de teste de regressão são conjuntos de testes que garantem que funcionalidades já existentes continuem funcionando após alterações no código, como correções de bugs, novas funcionalidades ou melhorias.
-A execução contínua dos testes de regressão é fundamental para evitar que mudanças causem efeitos indesejados, garantindo a estabilidade do sistema ao longo do tempo.
+# 2. Metodologia Cascata (Waterfall)
 
-Conclusão
-O conhecimento dessas metodologias — TDD, ATDD, BDD — e a prática dos testes de regressão são fundamentais para garantir a qualidade e a confiabilidade dos sistemas que desenvolvemos e testamos.
-Estudar e aplicar esses conceitos me permite compreender melhor os processos de desenvolvimento orientados a testes e contribuir para entregas mais seguras, alinhadas às necessidades do cliente e com menor incidência de falhas.
-Relação entre Metodologias de Desenvolvimento e Tipos de Testes
+A metodologia Cascata é um modelo tradicional onde as etapas do projeto seguem uma sequência definida.
 
-Para complementar, é importante entender como as metodologias TDD, ATDD e BDD se relacionam com os tipos clássicos de testes usados em QA:
+As principais fases são:
 
-TDD (Teste de Caixa Branca): Focado em testar o código internamente. O desenvolvedor conhece a estrutura e lógica e escreve testes para validar cada parte do código.
+- Levantamento de requisitos.
+- Análise e planejamento.
+- Desenvolvimento.
+- Testes.
+- Implantação.
+- Manutenção.
 
-ATDD e BDD (Teste de Caixa Preta): Mais voltados ao comportamento externo e aceitação do sistema, onde o foco está na funcionalidade entregue e na experiência do usuário, sem a necessidade de conhecer o código.
+## Participação do QA no modelo Cascata
 
-Essa relação reforça o entendimento de que a qualidade pode ser garantida tanto pelo controle interno do código quanto pela validação externa das funcionalidades, trazendo uma visão completa de QA.
+No modelo Cascata, os testes geralmente acontecem após a fase de desenvolvimento.
+
+O QA atua realizando:
+
+- Validação dos requisitos.
+- Execução dos casos de teste.
+- Identificação e documentação de defeitos.
+- Testes de regressão.
+
+---
+
+# 3. Metodologias Ágeis (Agile)
+
+As metodologias ágeis trabalham com entregas menores e frequentes, permitindo adaptação rápida às mudanças.
+
+Características:
+
+- Comunicação constante entre equipes.
+- Entregas incrementais.
+- Feedback contínuo.
+- Melhoria constante dos processos.
+
+O QA participa durante todo o ciclo de desenvolvimento, não apenas no final.
+
+---
+
+# 4. Scrum
+
+Scrum é um framework ágil utilizado para organizar o desenvolvimento em ciclos chamados Sprints.
+
+## Principais papéis:
+
+### Product Owner
+
+Responsável por definir prioridades e necessidades do produto.
+
+### Scrum Master
+
+Responsável por facilitar o processo e remover impedimentos.
+
+### Time de Desenvolvimento
+
+Responsável pela criação e evolução do sistema.
+
+### QA
+
+Responsável por garantir a qualidade através de:
+
+- Criação de cenários de teste.
+- Execução de testes manuais.
+- Validação de requisitos.
+- Identificação de bugs.
+- Apoio na prevenção de problemas.
+
+---
+
+# 5. Kanban
+
+Kanban é uma metodologia visual para gerenciamento de tarefas.
+
+As atividades são organizadas em um quadro contendo etapas como:
+
+- A fazer.
+- Em desenvolvimento.
+- Em testes.
+- Concluído.
+
+## Benefícios do Kanban:
+
+- Melhor visualização do trabalho.
+- Identificação de bloqueios.
+- Organização das prioridades.
+- Controle do fluxo de entrega.
+
+---
+
+# 6. Importância das Metodologias para QA
+
+Conhecer metodologias de desenvolvimento ajuda o QA a entender:
+
+- Quando participar do processo.
+- Como se comunicar com a equipe.
+- Como planejar os testes.
+- Como contribuir para a qualidade do produto.
+
+O QA moderno atua de forma colaborativa, ajudando a prevenir defeitos e melhorar continuamente o software.
+
+---
+
+# 7. Conclusão
+
+Independentemente da metodologia utilizada, o papel do QA é garantir que o produto entregue atenda aos requisitos esperados, tenha qualidade e proporcione uma boa experiência ao usuário final.

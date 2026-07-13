@@ -1,2 +1,23 @@
-# qa-manual-e-automatizado
-Repositório com estudos, práticas e projetos de QA (Quality Assurance), abrangendo testes manuais e automatizados. Criado para consolidar meu aprendizado em QA e demonstrar minha evolução na área.
+# QA Manual e Automação de Testes
+
+Repositório criado para demonstrar minha evolução em Qualidade de Software.
+
+## Conhecimentos aplicados
+
+- Testes funcionais
+- Testes exploratórios
+- Criação de casos de teste
+- Plano de testes
+- Relatório de bugs
+- Testes de API com Postman
+- Automação com Cypress
+
+## Projetos
+
+### Conversor VisãoA
+Aplicação utilizada para prática de testes manuais.
+
+Inclui:
+- Plano de testes
+- Casos de teste
+- Relatórios de validação

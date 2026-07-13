@@ -1,19 +1,118 @@
-Testes de Robustez
-Os Testes de Robustez são aqueles que verificam como o sistema reage quando recebe entradas erradas, inesperadas ou quando algo sai do normal. Diferente dos testes funcionais, que focam em validar o que o sistema deve fazer, os testes de robustez mostram se o sistema aguenta situações de erro sem travar ou apresentar problemas.
+# Testes de Robustez
 
-A ideia é testar os erros que podem acontecer, para garantir que o sistema consiga lidar com eles da forma correta, evitando falhas graves.
+## 1. Introdução
 
-Para que servem?
-Eles servem para garantir que o sistema continue funcionando, mesmo quando recebe dados inválidos ou enfrenta problemas, como falhas em conexões externas ou arquivos corrompidos. Assim, o usuário vê uma mensagem clara e o sistema não trava.
+Os testes de robustez têm como objetivo verificar como o sistema se comporta quando recebe entradas inválidas, inesperadas ou quando ocorre alguma situação fora do fluxo normal de utilização.
 
-Exemplos de situações testadas
-Quando o usuário digita um dado errado ou fora do que o sistema espera.
+Diferente dos testes funcionais, que validam se o sistema realiza corretamente suas funcionalidades, os testes de robustez avaliam a capacidade da aplicação de lidar com erros sem apresentar falhas ou comportamentos inesperados.
 
-Quando o sistema perde conexão com o banco de dados ou uma API externa.
+---
 
-Quando um arquivo está corrompido ou ilegível.
+## 2. Objetivo
 
-Quando ocorre algum erro inesperado e o sistema precisa tratar isso corretamente.
+Garantir que o sistema:
 
-Por que é importante?
-Fazer esses testes ajuda a deixar o software mais confiável e seguro. Além disso, evita que erros causem problemas maiores para o usuário ou para a empresa. Isso também ajuda a equipe a identificar onde o tratamento de erros pode ser melhorado.
+- Trate erros corretamente.
+- Apresente mensagens claras ao usuário.
+- Evite travamentos.
+- Continue funcionando em situações adversas.
+
+---
+
+# 3. Cenários de Teste
+
+## CT-RB001 - Campos obrigatórios não preenchidos
+
+**Cenário:**
+
+Usuário tenta realizar uma ação sem preencher informações obrigatórias.
+
+**Resultado esperado:**
+
+O sistema deve impedir a operação e informar quais campos precisam ser preenchidos.
+
+**Status:**
+
+Passou
+
+---
+
+## CT-RB002 - Entrada de dados inválidos
+
+**Cenário:**
+
+Usuário informa dados em formato incorreto.
+
+Exemplos:
+
+- Caracteres especiais.
+- Dados fora do padrão esperado.
+
+**Resultado esperado:**
+
+O sistema deve validar as informações e apresentar mensagem de orientação.
+
+**Status:**
+
+Passou
+
+---
+
+## CT-RB003 - Grande volume de caracteres
+
+**Cenário:**
+
+Usuário informa uma quantidade de caracteres acima do limite permitido.
+
+**Resultado esperado:**
+
+O sistema deve limitar a entrada ou apresentar mensagem informando o limite permitido.
+
+**Status:**
+
+Passou
+
+---
+
+## CT-RB004 - Falha de comunicação com serviço externo
+
+**Cenário:**
+
+Sistema perde comunicação com uma API ou serviço externo.
+
+**Resultado esperado:**
+
+A aplicação deve informar o problema ao usuário e evitar perda de dados.
+
+**Status:**
+
+Não validado
+
+---
+
+# 4. Situações Avaliadas
+
+Durante os testes de robustez podem ser analisados:
+
+- Dados inválidos.
+- Campos vazios.
+- Limites de entrada.
+- Falhas de integração.
+- Tratamento de exceções.
+- Mensagens de erro.
+
+---
+
+# 5. Importância dos Testes de Robustez
+
+Esses testes ajudam a aumentar a confiabilidade do software, reduzindo riscos de falhas inesperadas e melhorando a experiência do usuário.
+
+Um sistema preparado para situações de erro apresenta maior estabilidade e qualidade.
+
+---
+
+# 6. Conclusão
+
+Os testes de robustez complementam os testes funcionais, permitindo avaliar não apenas se o sistema funciona corretamente, mas também como ele reage quando recebe informações incorretas ou enfrenta situações inesperadas.
+
+Este documento faz parte dos estudos e práticas em Qualidade de Software (QA).

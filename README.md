@@ -6,7 +6,7 @@ Repositório criado para demonstrar minha evolução em Qualidade de Software.
 
 - Testes funcionais
 - Testes exploratórios
-- Criação casos de teste
+- Criação de casos de teste
 - Plano de testes
 - Relatório de bugs
 - Testes de API com Postman
@@ -15,9 +15,11 @@ Repositório criado para demonstrar minha evolução em Qualidade de Software.
 ## Projetos
 
 ### Conversor VisãoA
-Aplicação utilizada para prática de testes manuais.
+
+Aplicação utilizada como projeto de estudo para prática de testes manuais.
 
 Inclui:
+
 - Plano de testes
 - Casos de teste
 - Relatórios de validação

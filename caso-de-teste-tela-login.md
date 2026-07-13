@@ -1,48 +1,37 @@
-Caso de Testes - Tela de Login
-ID: CT001
-Título: Testar funcionalidade da tela de login
-Objetivo: Verificar se o usuário consegue acessar o sistema usando credenciais válidas e receber mensagens de erro apropriadas para entradas inválidas.
-Pré-condições: O usuário deve estar na página de login do sistema.
-Passos para testar:
+# Caso de Teste - Tela de Login
 
-Acessar a página de login.
+## CT001 - Login com credenciais válidas
 
-Inserir usuário válido e senha válida.
+**Objetivo:**  
+Validar se o usuário consegue acessar o sistema utilizando credenciais corretas.
 
-Clicar no botão "Entrar".
+**Pré-condições:**
+- Usuário possui cadastro no sistema.
+- Usuário está na tela de login.
 
-Verificar se o sistema direciona para a página principal.
+**Dados de teste:**
 
-Voltar para a página de login.
+Usuário:
+teste@email.com
 
-Inserir usuário inválido e senha válida.
+Senha:
+Senha@123
 
-Clicar no botão "Entrar".
+**Passos:**
 
-Verificar se aparece mensagem de erro "Usuário ou senha inválidos".
+1. Acessar a tela de login.
+2. Informar usuário válido.
+3. Informar senha válida.
+4. Clicar no botão "Entrar".
 
-Inserir usuário válido e senha inválida.
+**Resultado esperado:**
 
-Clicar no botão "Entrar".
+Usuário deve ser autenticado e direcionado para a página principal.
 
-Verificar se aparece mensagem de erro "Usuário ou senha inválidos".
+**Resultado obtido:**
 
-Deixar campos vazios e clicar em "Entrar".
+Comportamento validado conforme cenário esperado.
 
-Verificar se aparece mensagem "Preencha todos os campos".
-
-Resultado esperado:
-
-Usuário válido e senha correta entram no sistema.
-
-Usuário ou senha inválidos geram mensagem de erro.
-
-Campos vazios solicitam preenchimento.
-
-Resultado obtido:
-
-O sistema permitiu o login com usuário válido e senha correta e redirecionou para a página principal.
-
-Status:
+**Status:**
 
 Passou

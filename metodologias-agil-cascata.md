@@ -1,49 +1,105 @@
-Metodologias de Desenvolvimento: Cascata e Ágil
-Neste documento, apresento meu entendimento sobre as metodologias de desenvolvimento de software Cascata e Ágil, destacando as principais características de cada modelo, suas diferenças e o papel do profissional de QA em ambos os contextos.
+# Comparativo: Metodologia Ágil x Metodologia Cascata
 
-Modelo Cascata (Waterfall)
-O modelo em cascata é uma metodologia linear e sequencial, onde cada fase do desenvolvimento precisa ser concluída antes de iniciar a próxima. Ele é dividido em etapas bem definidas, como:
+## 1. Introdução
 
-Levantamento de Requisitos
+As metodologias Ágeis e Cascata representam formas diferentes de organizar o desenvolvimento de software.
 
-Análise
+Enquanto o modelo Cascata segue etapas sequenciais e planejadas previamente, as metodologias Ágeis trabalham com entregas contínuas, adaptação e colaboração entre equipes.
 
-Design (projeto)
+---
 
-Implementação (codificação)
+# 2. Metodologia Cascata (Waterfall)
 
-Testes
+## Características:
 
-Manutenção
+- Processo sequencial.
+- Requisitos definidos no início do projeto.
+- Alterações durante o desenvolvimento possuem maior impacto.
+- Testes geralmente realizados após o desenvolvimento.
 
-Esse modelo exige uma documentação detalhada desde o início e funciona melhor quando os requisitos são bem conhecidos e estáveis.
+## Fluxo:
 
-Papel do QA no modelo cascata:
-O QA atua principalmente na fase de testes, após o desenvolvimento estar completo. Isso pode limitar a identificação precoce de falhas, mas exige uma análise minuciosa e testes bem planejados com base na documentação.
+Requisitos → Análise → Desenvolvimento → Testes → Implantação → Manutenção
 
-Metodologias Ágeis
-As metodologias ágeis surgiram como uma resposta à rigidez do modelo cascata. São baseadas em ciclos curtos de desenvolvimento chamados iterações ou sprints, com foco em:
+## Atuação do QA:
 
-Entregas incrementais e contínuas
+O QA participa principalmente na fase de testes, realizando:
 
-Colaboração constante com o cliente
+- Criação de casos de teste.
+- Execução dos testes planejados.
+- Registro de defeitos.
+- Validação do sistema antes da entrega.
 
-Flexibilidade para mudanças nos requisitos
+---
 
-Comunicação frequente entre equipes
+# 3. Metodologia Ágil (Agile)
 
-Exemplos de metodologias ágeis incluem Scrum, Kanban e Extreme Programming (XP).
+## Características:
 
-Papel do QA em metodologias ágeis:
-O QA participa desde o início das sprints, colaborando com desenvolvedores e product owners. Os testes são feitos de forma contínua e incremental, com foco em qualidade desde as primeiras entregas. Isso permite encontrar e corrigir problemas mais cedo, além de contribuir com sugestões de melhoria.
+- Desenvolvimento dividido em pequenos ciclos.
+- Entregas frequentes.
+- Maior comunicação entre equipes.
+- Adaptação rápida às mudanças.
 
-Diferenças principais entre Cascata e Ágil
-Aspecto	Cascata	Ágil
-Processo	Sequencial	Iterativo e incremental
-Mudanças nos requisitos	Difíceis de adaptar	Bem-vindas, mesmo durante o projeto
-Envolvimento do QA	Após o desenvolvimento	Durante toda a sprint
-Entregas	Uma única no final	Entregas contínuas e frequentes
-Comunicação	Formal e documentada	Direta e constante
+## Fluxo:
 
-Conclusão
-Compreender essas metodologias é fundamental para atuar de forma eficiente como QA. Saber como se adaptar ao contexto de cada projeto — seja em um modelo mais tradicional como o cascata ou em uma abordagem ágil — permite ao profissional garantir a qualidade do software com mais estratégia, eficiência e colaboração.
+Planejamento → Desenvolvimento → Testes → Feedback → Melhoria contínua
+
+## Atuação do QA:
+
+No modelo Ágil, o QA participa desde o início do processo:
+
+- Analisando requisitos.
+- Criando cenários de teste.
+- Validando funcionalidades.
+- Trabalhando junto aos desenvolvedores.
+- Participando das reuniões do time.
+
+---
+
+# 4. Comparação entre os modelos
+
+| Característica | Cascata | Ágil |
+|---|---|---|
+| Planejamento | Feito no início | Contínuo |
+| Mudanças | Mais difíceis | Mais fáceis |
+| Entrega | Única no final | Pequenas entregas frequentes |
+| Testes | Após desenvolvimento | Durante todo processo |
+| Participação do QA | Mais concentrada no final | Desde o início |
+
+---
+
+# 5. Vantagens e Desvantagens
+
+## Cascata
+
+### Vantagens:
+- Processo organizado e previsível.
+- Documentação detalhada.
+- Fácil acompanhamento das etapas.
+
+### Desvantagens:
+- Dificuldade para mudanças.
+- Feedback tardio.
+- Problemas podem ser descobertos apenas no final.
+
+---
+
+## Ágil
+
+### Vantagens:
+- Maior adaptação às mudanças.
+- Feedback rápido.
+- Melhor comunicação entre equipes.
+
+### Desvantagens:
+- Exige maior colaboração.
+- Mudanças constantes podem exigir ajustes frequentes.
+
+---
+
+# 6. Conclusão
+
+O conhecimento das metodologias Ágil e Cascata é fundamental para um profissional de QA.
+
+Em ambientes modernos, o QA atua cada vez mais integrado ao desenvolvimento, ajudando a prevenir problemas, melhorar processos e garantir a qualidade do produto desde o início.

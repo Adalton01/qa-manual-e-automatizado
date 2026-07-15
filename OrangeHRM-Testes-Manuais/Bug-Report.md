@@ -1,6 +1,6 @@
 # Bug Report - OrangeHRM
 
-## Informações
+## Informações 
 
 - **ID:** BR-001
 - **Projeto:** OrangeHRM Demo
